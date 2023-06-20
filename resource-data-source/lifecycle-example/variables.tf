@@ -13,7 +13,7 @@ variable "sg_ingress_rules" {
      protocol    = "tcp"
      from_port   = 22
      to_port     = 22
-     cidr_block  = "0.0.0.0/0"
+     cidr_blockb  = "0.0.0.0/0"
      description = "test"
    },
    2 = {
