@@ -2,7 +2,7 @@ resource "aws_kms_key" "kms-key" {
   description = var.description
   deletion_window_in_days = var.deletion_window_in_days
   is_enabled = var.enabled
-  #policy = data.aws_iam_policy_document.kms.json
+  policy = data.aws_iam_policy_document.s3-kms-key.json
   enable_key_rotation = var.enable_key_rotation
   tags = local.common_tags
 }
@@ -26,8 +26,8 @@ resource "random_string" "kms-key-name" {
     length = 8
 }
 
-resource "aws_kms_key_policy" "s3-key-policy" {
-  key_id = aws_kms_key.kms-key.id
-  policy = file("${path.module}/policy/kms.json")
+# resource "aws_kms_key_policy" "s3-key-policy" {
+#   key_id = aws_kms_key.kms-key.id
+#   policy = file("${path.module}/policy/kms.json")
   
-}
+# }

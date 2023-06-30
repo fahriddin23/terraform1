@@ -1,14 +1,14 @@
 variable "bucket_name" {
-    default =  "tf-state-fahridd-2023"
-    type = string
-    description = "Bucket name"
+  default     = "tf-state-fahrid-2023"
+  type        = string
+  description = "Bucket name"
 }
 
 variable "env" {
-    description = "environment"
-    type = string
-    default = "prod"
-  
+  description = "environment"
+  type        = string
+  default     = "prod"
+
 }
 
 variable "instance_type" {

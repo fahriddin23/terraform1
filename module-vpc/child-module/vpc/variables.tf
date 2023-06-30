@@ -12,3 +12,9 @@ variable "private_subnet_cidr_blocks" {
   description = "CIDR blocks for private subnets"
   default     = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 }
+
+variable "availability_zone" {
+  description = "Availability zone"
+  default     = "us-east-1a"
+}
+  

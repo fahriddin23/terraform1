@@ -16,3 +16,5 @@ data "aws_ami" "amazon_ubuntu" {
     values = ["099720109477"]
   }
 }
+
+data "aws_caller_identity" "current" {}
