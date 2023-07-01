@@ -1,9 +1,8 @@
-# output "vpc_id" {
-#   description = "The ID of the VPC"
-#   value       = module.vpc.vpc_id
-# }
+output "aws_subnet_public_subnet_id" {
+  value = aws_subnet.public_subnet.id
+}
+  
+output "aws_subnet_private_subnet_id" {
+  value = aws_subnet.private_subnet.id
+}
 
-# output "subnet_id" {
-#   description = "The ID of the subnet"
-#   value       = module.vpc.subnet_id
-# }
